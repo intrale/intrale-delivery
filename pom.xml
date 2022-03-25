@@ -83,7 +83,7 @@
 	<dependency>
 		<groupId>ar.com.intrale</groupId>
 		<artifactId>products-client</artifactId>
-		<version>DEV</version>
+		<version>0.8.26</version>
 	</dependency>
   </dependencies>
 
