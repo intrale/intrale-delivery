@@ -125,7 +125,7 @@ jobs:
           DATABASE_ACCESS: ${{ secrets.DATABASE_ACCESS }} 
           DATABASE_SECRET: ${{ secrets.DATABASE_SECRET }} 
         run: |
-          sed -i "s/PRODUCTS_VERSION/${VERSION_TARGET}/gi" ./client/pom.xml
+          sed -i "s/DELIVERY_VERSION/${VERSION_TARGET}/gi" ./client/pom.xml
           sed -i "s/CORE_VERSION/${CORE_VERSION}/gi" ./client/pom.xml
           sed -i "s/COMMONS_VERSION/${COMMONS_VERSION}/gi" ./client/pom.xml
           cd client
