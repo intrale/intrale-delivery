@@ -92,10 +92,10 @@ jobs:
           sed -i "s/CORE_VERSION/${CORE_VERSION}/gi" pom.xml
           sed -i "s/COMMONS_VERSION/${COMMONS_VERSION}/gi" pom.xml
           sed -i "s/TEST_VERSION/${TEST_VERSION}/gi" pom.xml
-          sed -i "s/PRODUCTS_VERSION/${VERSION_TARGET}/gi" pom.xml
-          sed -i "s/PRODUCTS_VERSION/${VERSION_TARGET}/gi" ./core/pom.xml
+          sed -i "s/DELIVERY_VERSION/${VERSION_TARGET}/gi" pom.xml
+          sed -i "s/DELIVERY_VERSION/${VERSION_TARGET}/gi" ./core/pom.xml
           sed -i "s/CORE_VERSION/${CORE_VERSION}/gi" ./core/pom.xml
-          sed -i "s/PRODUCTS_VERSION/${VERSION_TARGET}/gi" ./services/pom.xml
+          sed -i "s/DELIVERY_VERSION/${VERSION_TARGET}/gi" ./services/pom.xml
           sed -i "s/COMMONS_VERSION/${COMMONS_VERSION}/gi" ./services/pom.xml
           sed -i "s/TEST_VERSION/${TEST_VERSION}/gi" ./services/pom.xml
           sed -i "s/PRODUCTS_VERSION/${PRODUCTS_VERSION}/gi" ./services/pom.xml
