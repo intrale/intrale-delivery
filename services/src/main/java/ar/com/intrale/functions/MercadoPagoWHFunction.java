@@ -10,6 +10,7 @@ import com.amazonaws.services.dynamodbv2.AmazonDynamoDB;
 import com.fasterxml.jackson.core.JsonProcessingException;
 
 import ar.com.intrale.BaseFunction;
+import ar.com.intrale.FunctionConst;
 import ar.com.intrale.FunctionResponseToBase64HttpResponseBuilder;
 import ar.com.intrale.exceptions.FunctionException;
 import ar.com.intrale.messages.MercadoPagoWHRequest;
@@ -17,7 +18,7 @@ import ar.com.intrale.messages.Response;
 import ar.com.intrale.messages.builders.StringToMercadoPagoWHRequestBuilder;
 
 @Singleton
-@Named(DeleteDeliveryLocationFunction.FUNCTION_NAME)
+@Named(FunctionConst.READ)
 public class MercadoPagoWHFunction extends BaseFunction<MercadoPagoWHRequest, Response, AmazonDynamoDB, StringToMercadoPagoWHRequestBuilder, FunctionResponseToBase64HttpResponseBuilder> {
 
 	private static final Logger LOGGER = LoggerFactory.getLogger(MercadoPagoWHFunction.class);
