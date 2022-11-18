@@ -19,6 +19,10 @@
 
 		<database.access>${env.DATABASE_ACCESS}</database.access>
 		<database.secret>${env.DATABASE_SECRET}</database.secret>
+		
+		<s3.bucketname>${env.S3_BUCKET_NAME}</s3.bucketname>
+		<s3.access>${env.S3_ACCESS}</s3.access>
+		<s3.secret>${env.S3_SECRET}</s3.secret>
 
 	</properties>
 
