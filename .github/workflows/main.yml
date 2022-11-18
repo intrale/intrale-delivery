@@ -87,6 +87,9 @@ jobs:
           COGNITO_SECRET: ${{ secrets.COGNITO_SECRET }} 
           DATABASE_ACCESS: ${{ secrets.DATABASE_ACCESS }} 
           DATABASE_SECRET: ${{ secrets.DATABASE_SECRET }} 
+          S3_ACCESS: ${{ secrets.S3_ACCESS }} 
+          S3_SECRET: ${{ secrets.S3_SECRET }} 
+          S3_BUCKET_NAME: ${{ secrets.S3_BUCKET_NAME }}   
         run: |
           sed -i "s/PARENT_VERSION/${PARENT_VERSION}/gi" pom.xml
           sed -i "s/CORE_VERSION/${CORE_VERSION}/gi" pom.xml
