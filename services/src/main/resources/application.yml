@@ -11,7 +11,7 @@ app:
   security:
     create: adminProducts
     delete: adminProducts
-    read: adminProducts
+    #read: null
     update: adminProducts
   activity:
     enabled: ${validate.enabled:false}
