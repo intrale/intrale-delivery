@@ -2,6 +2,10 @@ package ar.com.intrale.messages;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+import io.micronaut.core.annotation.Introspected;
+
+
+@Introspected
 /**
   "description": ".....",
   "merchant_order": 4945357007,

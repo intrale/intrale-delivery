@@ -7,6 +7,6 @@ import ar.com.intrale.messages.MercadoPagoNotificationEventRequest;
 import ar.com.intrale.messages.MercadoPagoNotificationRequest;
 
 @Singleton
-public class StringToMercadoPagoNotificationRequestBuilder extends StringToAnyRequestBuilder<MercadoPagoNotificationRequest, MercadoPagoNotificationEventRequest> {
+public class StringToMercadoPagoNotificationRequestBuilder extends StringToAnyRequestBuilder<MercadoPagoNotificationEventRequest, MercadoPagoNotificationOrderRequest> {
 
 }
