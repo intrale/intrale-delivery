@@ -4,7 +4,7 @@ import javax.inject.Singleton;
 
 import ar.com.intrale.StringToAnyRequestBuilder;
 import ar.com.intrale.messages.MercadoPagoNotificationEventRequest;
-import ar.com.intrale.messages.MercadoPagoNotificationRequest;
+import ar.com.intrale.messages.MercadoPagoNotificationOrderRequest;
 
 @Singleton
 public class StringToMercadoPagoNotificationRequestBuilder extends StringToAnyRequestBuilder<MercadoPagoNotificationEventRequest, MercadoPagoNotificationOrderRequest> {
