@@ -13,18 +13,18 @@ import ar.com.intrale.BaseFunction;
 import ar.com.intrale.FunctionConst;
 import ar.com.intrale.FunctionResponseToBase64HttpResponseBuilder;
 import ar.com.intrale.exceptions.FunctionException;
-import ar.com.intrale.messages.MercadoPagoWHRequest;
+import ar.com.intrale.messages.MercadoPagoNotificationEventRequest;
 import ar.com.intrale.messages.Response;
-import ar.com.intrale.messages.builders.StringToMercadoPagoWHRequestBuilder;
+import ar.com.intrale.messages.builders.StringToMercadoPagoNotificationRequestBuilder;
 
 @Singleton
 @Named(FunctionConst.READ)
-public class MercadoPagoWHFunction extends BaseFunction<MercadoPagoWHRequest, Response, AmazonDynamoDB, StringToMercadoPagoWHRequestBuilder, FunctionResponseToBase64HttpResponseBuilder> {
+public class MercadoPagoNotificationFunction extends BaseFunction<MercadoPagoNotificationEventRequest, Response, AmazonDynamoDB, StringToMercadoPagoNotificationRequestBuilder, FunctionResponseToBase64HttpResponseBuilder> {
 
-	private static final Logger LOGGER = LoggerFactory.getLogger(MercadoPagoWHFunction.class);
+	private static final Logger LOGGER = LoggerFactory.getLogger(MercadoPagoNotificationFunction.class);
 	
 	@Override
-	public Response execute(MercadoPagoWHRequest request) throws FunctionException {
+	public Response execute(MercadoPagoNotificationEventRequest request) throws FunctionException {
 		try {
 			LOGGER.info("MercadoPagoWHRequest:" + mapper.writeValueAsString(request));
 		} catch (JsonProcessingException e) {
