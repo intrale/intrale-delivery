@@ -26,6 +26,7 @@ import io.micronaut.core.annotation.Introspected;
  */
 public class MercadoPagoWHRequest extends RequestRoot {
 	
+	private String id;
 	private Boolean liveMode;
 	private String type;
 	private Date created;
@@ -36,11 +37,20 @@ public class MercadoPagoWHRequest extends RequestRoot {
 	private String action;
 	private MercadoPagoWHData data;
 
-	@JsonProperty("id")
+	public String getId() {
+		return id;
+	}
+
+	public void setId(String id) {
+		this.id = id;
+		setRequestId(id);
+	}
+
+	/*@JsonProperty("id")
 	@Override
 	public @NotBlank String getRequestId() {
 		return super.getRequestId();
-	}
+	}*/
 	
 	public Boolean getLiveMode() {
 		return liveMode;
