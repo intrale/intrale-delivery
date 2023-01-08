@@ -32,7 +32,7 @@ ReadBaseFunction <ReadOrderRequest, ReadOrderResponse, AmazonDynamoDB, StringToR
 
 	@Override
 	protected Boolean isNeedsToBeFiltered(ReadOrderRequest request, Order entity) {
-		Boolean idFilter = (!StringUtils.isEmpty(request.getOrderId()) && !entity.getOrderId().equals(request.getOrderId()));
+		Boolean idFilter = (!StringUtils.isEmpty(request.getOrderId()) && !entity.getId().equals(request.getOrderId()));
 		Boolean needsToBeFiltered = (idFilter);
 		return needsToBeFiltered;
 	}

@@ -1,6 +1,8 @@
 package ar.com.intrale.mappers;
 
 import org.mapstruct.Mapper;
+import org.mapstruct.Mapping;
+import org.mapstruct.Mappings;
 
 import com.amazonaws.services.dynamodbv2.AmazonDynamoDB;
 import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBMapper;
@@ -42,6 +44,9 @@ public abstract class OrderMapper {
 		this.productClient = productClient;
 	}
 
+	@Mappings({
+	      @Mapping(target="id", source="orderId"),
+	    })
 	public abstract Order requestToModel(SaveOrderRequest request);
 	public abstract OrderMessage modelToRequest(Order order);
 	

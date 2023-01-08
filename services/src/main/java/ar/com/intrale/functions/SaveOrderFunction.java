@@ -34,7 +34,7 @@ public class SaveOrderFunction extends BaseFunction<SaveOrderRequest, SaveOrderR
 	public SaveOrderResponse execute(SaveOrderRequest request) throws FunctionException {
 		SaveOrderResponse response = new SaveOrderResponse();
 		
-		LOGGER.info("Inicializando AddDeliveryLocation");
+		LOGGER.info("Inicializando SaveOrderFunction");
 		
 		DynamoDBMapper dynamoDBMapper = new DynamoDBMapper(provider);
 		
@@ -43,8 +43,8 @@ public class SaveOrderFunction extends BaseFunction<SaveOrderRequest, SaveOrderR
 	
 		dynamoDBMapper.save(order);
 		
-		response.setOrderId(order.getOrderId());
-	   LOGGER.info("Finalizando AddDeliveryLocation");
+		response.setOrderId(order.getId());
+	   LOGGER.info("Finalizando SaveOrderFunction");
 	   
        return response;
 	}
