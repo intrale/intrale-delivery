@@ -21,6 +21,8 @@ public class Order {
 	
 	private String orderStatus;
 	
+	private Integer collectorId;
+	
 	private DeliveryLocation deliveryLocation;
 	
 	@DynamoDBTypeConverted(converter = OrderProductToJsonConverter.class)
@@ -81,5 +83,10 @@ public class Order {
 		this.products = products;
 	}
 	
-	
+	public Integer getCollectorId() {
+		return collectorId;
+	}
+	public void setCollectorId(Integer collectorId) {
+		this.collectorId = collectorId;
+	}	
 }

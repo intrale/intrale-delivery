@@ -20,6 +20,8 @@ public class SaveOrderRequest extends RequestRoot {
 	
 	private String deliveryLocation;
 	
+	private Integer collectorId;
+	
 	public String getDeliveryLocation() {
 		return deliveryLocation;
 	}
@@ -53,4 +55,11 @@ public class SaveOrderRequest extends RequestRoot {
 		this.products = products;
 	}
 
+	
+	public Integer getCollectorId() {
+		return collectorId;
+	}
+	public void setCollectorId(Integer collectorId) {
+		this.collectorId = collectorId;
+	}	
 }
