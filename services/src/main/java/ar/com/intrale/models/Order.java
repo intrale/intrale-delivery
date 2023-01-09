@@ -7,6 +7,8 @@ import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBHashKey;
 import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBTable;
 import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBTypeConverted;
 
+import io.micronaut.core.util.StringUtils;
+
 @DynamoDBTable(tableName="order")
 public class Order {
 
@@ -24,14 +26,15 @@ public class Order {
 	@DynamoDBTypeConverted(converter = OrderProductToJsonConverter.class)
 	private Set<OrderProduct> products;
 
-
 	public String getId() {
 		return id;
 	}
-
 	public void setId(String id) {
-		this.id = id;
+		if (StringUtils.isNotEmpty(id)) {
+			this.id = id;
+		}
 	}
+
 
 	public String getBusinessName() {
 		return businessName;
