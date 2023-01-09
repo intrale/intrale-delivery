@@ -6,20 +6,12 @@ import org.mapstruct.Mappings;
 
 import com.amazonaws.services.dynamodbv2.AmazonDynamoDB;
 import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBMapper;
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.JsonMappingException;
 
 import ar.com.intrale.client.ProductClient;
-import ar.com.intrale.exceptions.ClientResponseException;
 import ar.com.intrale.messages.OrderMessage;
-import ar.com.intrale.messages.OrderProductMessage;
-import ar.com.intrale.messages.ProductMessage;
-import ar.com.intrale.messages.ReadProductRequest;
-import ar.com.intrale.messages.ReadProductResponse;
 import ar.com.intrale.messages.SaveOrderRequest;
 import ar.com.intrale.models.DeliveryLocation;
 import ar.com.intrale.models.Order;
-import ar.com.intrale.models.OrderProduct;
 
 @Mapper
 public abstract class OrderMapper {
@@ -36,6 +28,7 @@ public abstract class OrderMapper {
 		this.provider = provider;
 	}
 
+	
 	public ProductClient getProductClient() {
 		return productClient;
 	}
@@ -59,7 +52,7 @@ public abstract class OrderMapper {
 		return deliveryLocation.getDeliveryLocationId();
 	}
 	
-	public OrderProduct productMessageToProduct(OrderProductMessage orderProductMessage) throws JsonMappingException, JsonProcessingException, ClientResponseException {
+	/*public OrderProduct productMessageToProduct(OrderProductMessage orderProductMessage) throws JsonMappingException, JsonProcessingException, ClientResponseException {
 		ReadProductRequest readProductRequest = new ReadProductRequest();
 		readProductRequest.setRequestId(orderProductMessage.getRequestId());
 		readProductRequest.setProductId(orderProductMessage.getProductId());
@@ -69,7 +62,7 @@ public abstract class OrderMapper {
 		orderProduct.setProductId(orderProductMessage.getProductId());
 		orderProduct.setCount(orderProductMessage.getCount());
 		return orderProduct;
-	}
+	}*/
 	
 	
 	

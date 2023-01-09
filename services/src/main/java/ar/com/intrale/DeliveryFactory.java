@@ -39,7 +39,7 @@ public class DeliveryFactory extends IntraleFactory<AmazonDynamoDB>{
         return amazonDynamoDB;
 	}
 	
-	@Bean 
+	@Bean  
 	public OrderMapper orderMapper() {
 		OrderMapper orderMapper = Mappers.getMapper(OrderMapper.class);
 		orderMapper.setProductClient(productClient);
