@@ -30,6 +30,11 @@ public class Order {
 		return id;
 	}
 	public void setId(String id) {
+		/**
+		 * Tener en cuenta que si no se coloca esta validacion
+		 * cuando se utiliza el mapper, se pisa el valor que se autogenera
+		 * dando una excepcion al intentar almacenar
+		 */
 		if (StringUtils.isNotEmpty(id)) {
 			this.id = id;
 		}
