@@ -46,5 +46,6 @@ public class DeliveryFactory extends IntraleFactory<AmazonDynamoDB>{
 		orderMapper.setProvider(applicationContext.getBean(AmazonDynamoDB.class));
 		return orderMapper;
 	}
+	
 
 }
