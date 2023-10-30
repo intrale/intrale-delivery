@@ -9,7 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import io.micronaut.core.annotation.Introspected;
 
 @Introspected
-/*
+/**
  {
   "id": 12345,
   "live_mode": true,
@@ -23,7 +23,7 @@ import io.micronaut.core.annotation.Introspected;
   "data": {
       "id": "999999999"
   }
- */
+ **/
 public class MercadoPagoNotificationActionRequest extends MercadoPagoNotificationRequest {
 	
 	private Boolean liveMode;
